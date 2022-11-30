@@ -7,19 +7,22 @@
     <title>Vue.js CDN Example</title>
   </head>
   <body>
-    <header>
-      <h1>Coding Task</h1>
-      <p><strong> Module: Web Apps with Vue.js - Part 1</strong></p>
+    <header id="head">
+      <h1>{{title}}</h1>
+      <p><strong> Module: {{module}}</strong></p>
     </header>
     <div id="app">
-      <h2>Welcome back {{userName}} and <em> <span v-highlight>{{task}} </span></em> !</h2>
+      <h2>
+        <span v-highlight
+          >Welcome back {{userName}} and <em> {{task}} </em> !</span
+        >
+      </h2>
       <p>You logged in on {{ new Date().toLocaleString('en-us') }}</p>
-      
+
       <h3>Introduction to Directives</h3>
       <p>My name is <span v-highlight>{{ userName }}.</span></p>
-      <p v-text="'Hello World!'"></p>
-      <p v-html="'cola'"></p>
-
+      <p v-text="'Hello World! v-text'"></p>
+      <p v-html="'<h4>I am a h4 as a v-html </h4>'"></p>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="script.js"></script>

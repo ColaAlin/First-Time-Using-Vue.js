@@ -10,7 +10,7 @@ const app = Vue.createApp({
       mounted(el) {
         el.style.border = "2px solid red";
         el.style.backgroundColor = "salmon";
-        el.style.borderRadius = "20px";
+        el.style.borderRadius = "5px";
         el.style.fontSize = "20px";
         el.style.fontFamily = "Monospace";
         el.style.fontWeight = "bold";
@@ -20,4 +20,11 @@ const app = Vue.createApp({
   },
 }).mount("#app");
 
-console.log(app.userName);
+const head = Vue.createApp({
+  data() {
+    return {
+      title: "Coding Task",
+      module: "Web Apps with Vue.js - Part 1",
+    };
+  },
+}).mount("#head");
