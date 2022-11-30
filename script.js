@@ -2,7 +2,11 @@ const app = Vue.createApp({
   data() {
     return {
       userName: "Alin Cristian Cola",
-      task: "happy coding",
+        task: "happy coding",
+        imageAttrs: {
+            src: "https://picsum.photos/id/13/367/267",
+            alt: "Landscape",
+      }
     };
   },
   directives: {
